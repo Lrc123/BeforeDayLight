@@ -83,11 +83,18 @@ protected:
 	UPROPERTY()
 	bool jumping;
 
+	virtual void PostInitializeComponents() override;
+
+	UFUNCTION()
+	void OnHealthChanged(AActor* InstigatorActor, UBDLAttributeComponent* OwningComp, float NewHealth, float Delta);
+	
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	
 
 };

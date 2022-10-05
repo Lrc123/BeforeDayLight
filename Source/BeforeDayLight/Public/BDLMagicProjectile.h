@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "BDLProjectileBase.h"
-#include "GameFramework/Actor.h"
 #include "BDLMagicProjectile.generated.h"
 
 

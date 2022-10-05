@@ -37,7 +37,10 @@ ABDLProjectileBase::ABDLProjectileBase()
 void ABDLProjectileBase::OnActorHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
 	//if(!OtherActor->IsA(ABDLCharacter::StaticClass()))
-	if(OtherActor && OtherActor != GetInstigator())
+	UBDLAttributeComponent* AttributeComp = Cast<UBDLAttributeComponent>(OtherActor->GetComponentByClass(UBDLAttributeComponent::StaticClass()));
+	if(OtherActor
+		&& OtherActor != GetInstigator()
+		&& !AttributeComp)
 	{
 		Explode();
 	}

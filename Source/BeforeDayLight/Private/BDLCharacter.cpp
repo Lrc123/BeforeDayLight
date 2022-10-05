@@ -219,6 +219,24 @@ void ABDLCharacter::Tick(float DeltaTime)
 
 }
 
+void ABDLCharacter::OnHealthChanged(AActor* InstigatorActor, UBDLAttributeComponent* OwningComp, float NewHealth, float Delta)
+{
+	if(NewHealth <= 0.0f && Delta < 0.0f)
+	{
+		APlayerController* PC = Cast<APlayerController>(GetController());
+		DisableInput(PC);
+	}
+	
+}
+
+void ABDLCharacter::PostInitializeComponents()
+{
+	Super::PostInitializeComponents();
+
+	AttributeComp->OnHealthChanged.AddDynamic(this, &ABDLCharacter::OnHealthChanged);
+}
+
+
 // Called to bind functionality to input
 void ABDLCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {

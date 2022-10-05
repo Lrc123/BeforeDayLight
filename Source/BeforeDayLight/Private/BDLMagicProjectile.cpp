@@ -12,6 +12,7 @@ ABDLMagicProjectile::ABDLMagicProjectile()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+	//SphereComp->OnComponentHit.RemoveDynamic(this, &ABDLMagicProjectile::OnActorHit);
 	SphereComp->OnComponentBeginOverlap.AddDynamic(this, &ABDLMagicProjectile::OnActorOverlap);
 
 	
@@ -25,8 +26,8 @@ void ABDLMagicProjectile::OnActorOverlap(UPrimitiveComponent* OverlappedComponen
 		UBDLAttributeComponent* AttributeComp = Cast<UBDLAttributeComponent>(OtherActor->GetComponentByClass(UBDLAttributeComponent::StaticClass()));
 		if (AttributeComp)
 		{
-			AttributeComp->ApplyHealthChange(-20.0f);
 			Explode();
+			AttributeComp->ApplyHealthChange(-DamageAmount);
 			Destroy();
 		}
 		

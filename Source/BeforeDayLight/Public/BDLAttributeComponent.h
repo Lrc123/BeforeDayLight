@@ -27,9 +27,9 @@ protected:
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Attributes")
 	float Health = 100.f;
+	
 
 public:
-
 
 	UPROPERTY(BlueprintAssignable)
 	FOnHealthChanged OnHealthChanged;
@@ -37,6 +37,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Attributes")
 	bool ApplyHealthChange(float Delta);
 
+	UFUNCTION(BlueprintCallable)
+	bool IsAlive();
 		
 };
 
