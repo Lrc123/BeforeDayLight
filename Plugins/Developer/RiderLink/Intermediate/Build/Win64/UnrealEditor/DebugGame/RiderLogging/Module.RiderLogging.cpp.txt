@@ -1,0 +1,501 @@
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UnrealEditor\DebugGame\RiderLogging\Definitions.h
+D:/githubdesktop/BeforeDayLight/Plugins/Developer/RiderLink/Source/RiderLogging/Private/RiderLogging.cpp
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RiderLogging\Private\RiderLogging.hpp
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RiderLogging\Private\RiderOutputDevice.hpp
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Misc/OutputDevice.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\CoreTypes.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\HAL/Platform.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Misc/Build.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\HAL\PreprocessorHelpers.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Windows/WindowsPlatformCompilerPreSetup.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\GenericPlatform/GenericPlatformCompilerPreSetup.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\GenericPlatform/GenericPlatform.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Windows/WindowsPlatformCodeAnalysis.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Windows/WindowsPlatform.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\sal.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\concurrencysal.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\MSVC/MSVCPlatform.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Windows/WindowsPlatformCompilerSetup.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\ProfilingDebugging/UMemoryDefines.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Misc/CoreMiscDefines.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Misc/CoreDefines.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\CoreFwd.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Containers/ContainersFwd.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Traits/IsContiguousContainer.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\initializer_list
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\yvals_core.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\vcruntime.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\vadefs.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xkeycheck.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\cstddef
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\stddef.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\corecrt.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xtr1common
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\UObject/UObjectHierarchyFwd.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Logging/LogVerbosity.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Misc/VarArgs.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/IsValidVariadicFunctionArg.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates\IsEnum.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/AndOrNot.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/IsArrayOrRefOfType.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Delegates/Delegate.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Misc/AssertionMacros.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\HAL/PlatformMisc.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\GenericPlatform/GenericPlatformMisc.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\HAL/PlatformCrt.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\new
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\exception
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\yvals.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\crtdbg.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\vcruntime_new_debug.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\vcruntime_new.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\crtdefs.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\use_ansi.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\type_traits
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\cstdint
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\stdint.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xstddef
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\cstdlib
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\math.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\corecrt_math.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\stdlib.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\corecrt_malloc.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\corecrt_search.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\corecrt_wstdlib.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\limits.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\malloc.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\vcruntime_exception.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\eh.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\corecrt_terminate.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\wchar.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\corecrt_memcpy_s.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\errno.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\vcruntime_string.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\corecrt_wconio.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\corecrt_stdio_config.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\corecrt_wctype.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\corecrt_wdirect.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\corecrt_wio.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\corecrt_share.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\corecrt_wprocess.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\corecrt_wstdio.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\corecrt_wstring.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\corecrt_wtime.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\sys/stat.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\sys/types.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\stdio.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\stdarg.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\math.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\float.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\string.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\corecrt_memory.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Misc/CompressionFlags.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Misc/EnumClassFlags.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Math/NumericLimits.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Windows/WindowsPlatformMisc.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\HAL/PlatformMemory.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\GenericPlatform/GenericPlatformMemory.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Windows/WindowsPlatformMemory.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Windows/WindowsSystemIncludes.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Windows/MinimalWindowsApi.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\intrin.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\intrin0.inl.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\setjmp.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\immintrin.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\wmmintrin.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\nmmintrin.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\smmintrin.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\tmmintrin.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\pmmintrin.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\emmintrin.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xmmintrin.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\mmintrin.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\zmmintrin.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\ammintrin.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\tchar.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\intsafe.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\winapifamily.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\winpackagefamily.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\specstrings.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\specstrings_strict.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\specstrings_undef.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\driverspecs.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\sdv_driverspecs.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared\strsafe.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\ProfilingDebugging/CpuProfilerTrace.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\TraceLog\Public\Trace/Trace.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\TraceLog\Public\Trace\Detail/Trace.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\TraceLog\Public\Trace/Config.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\TraceLog\Public\Trace/Detail/Channel.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\TraceLog\Public\Trace/Detail/Channel.inl
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/EnableIf.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\UObject/NameTypes.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\HAL/UnrealMemory.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/IsPointer.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\HAL/MemoryBase.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\HAL/PlatformAtomics.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\GenericPlatform/GenericPlatformAtomics.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Windows/WindowsPlatformAtomics.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Misc/Exec.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/Atomic.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\HAL/ThreadSafeCounter.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\HAL/ThreadSafeCounter64.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/IsIntegral.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/IsTrivial.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/IsTriviallyDestructible.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/IsTriviallyCopyConstructible.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/IsTriviallyCopyAssignable.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Traits/IntType.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/UnrealTypeTraits.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/AreTypesEqual.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/IsArithmetic.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/RemoveCV.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Traits/IsVoidType.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/Models.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/Identity.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/IsPODType.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/UnrealTemplate.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/CopyQualifiersAndRefsFromTo.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/CopyQualifiersFromTo.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/RemoveReference.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/TypeCompatibleBytes.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Containers/UnrealString.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/IsArray.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Containers/Array.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/IsSigned.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Containers/ContainerAllocationPolicies.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\HAL/PlatformMath.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\GenericPlatform/GenericPlatformMath.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/Decay.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/IsFloatingPoint.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Windows/WindowsPlatformMath.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Math/UnrealPlatformMathSSE4.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Math/UnrealPlatformMathSSE.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/MemoryOps.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/IsPolymorphic.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Containers/ContainerElementTypeCompatibility.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Serialization/Archive.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/IsEnumClass.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/Function.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/ChooseClass.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/Invoke.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/PointerIsConvertibleFromTo.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Misc/StaticAssertCompleteType.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/LosesQualifiersFromTo.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/IsConstructible.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/IsInvocable.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/IsMemberPointer.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Math/UnrealMathUtility.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\HAL/PlatformProperties.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\GenericPlatform/GenericPlatformProperties.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Windows/WindowsPlatformProperties.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Misc/EngineVersionBase.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Internationalization/TextNamespaceFwd.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Serialization/MemoryImageWriter.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Serialization/MemoryLayout.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Containers/EnumAsByte.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/TypeHash.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Misc/Crc.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Misc/Char.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\ctype.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\wctype.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Misc/CString.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\HAL/PlatformString.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Windows/WindowsPlatformString.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\GenericPlatform/MicrosoftPlatformString.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\GenericPlatform/GenericPlatformString.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\GenericPlatform/GenericPlatformStricmp.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Containers/StringFwd.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/IsAbstract.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Misc/DelayedAutoRegister.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Algo/Heapify.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Algo/Impl/BinaryHeap.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/ReversePredicate.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/IdentityFunctor.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/Less.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Algo/HeapSort.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Algo/IsHeap.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/Sorting.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Algo/BinarySearch.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Algo/Sort.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Algo/IntroSort.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/AlignmentTemplates.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Misc/StringFormatArg.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\HAL/CriticalSection.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Windows/WindowsCriticalSection.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Misc/Timespan.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Math/Interval.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Containers/StringConv.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\UObject/UnrealNames.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\UObject\UnrealNames.inl
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/SharedPointer.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Containers/Map.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Algo/Reverse.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Containers/Set.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Misc/StructBuilder.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Containers/SparseArray.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Containers/ScriptArray.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Containers/BitArray.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Serialization/StructuredArchive.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Serialization/StructuredArchiveFormatter.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Serialization\Formatters/BinaryArchiveFormatter.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Misc/Optional.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Concepts/Insertable.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Serialization/ArchiveProxy.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/UniqueObj.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/UniquePtr.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/RemoveExtent.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/RetainedRef.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/Tuple.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Delegates/IntegerSequence.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\tuple
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xutility
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\climits
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\cstring
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\utility
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\CoreGlobals.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Logging/LogMacros.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Logging/LogCategory.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Logging/LogScopedCategoryAndVerbosityOverride.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Logging/LogTrace.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\ProfilingDebugging/FormatArgsTrace.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\HAL/PlatformTLS.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\GenericPlatform/GenericPlatformTLS.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Windows/WindowsPlatformTLS.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/SharedPointerInternals.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/SharedPointerTesting.inl
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\UObject/WeakObjectPtrTemplates.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Delegates/MulticastDelegateBase.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Delegates/IDelegateInstance.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Delegates/DelegateSettings.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Delegates/DelegateBase.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Delegates/DelegateInstanceInterface.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Delegates/DelegateInstancesImpl.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Delegates/DelegateSignatureImpl.inl
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\UObject/ScriptDelegates.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Templates/IsConst.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Delegates/DelegateCombinations.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime/LifetimeDefinition.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util/core_traits.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\types/Void.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\functional
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\typeinfo
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\vcruntime_typeinfo.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xmemory
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\limits
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\cfloat
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\cwchar
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\cstdio
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\intrin0.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\isa_availability.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xatomic.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\string
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xstring
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\iosfwd
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\cctype
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime\LifetimeImpl.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/hash.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\map
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xtree
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\memory
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\mutex
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\chrono
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\ctime
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\time.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\ratio
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xtimec.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\system_error
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\__msvc_system_error_abi.hpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\cerrno
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\stdexcept
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xcall_once.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xerrc.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\atomic
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xthreads.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\thread
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\process.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\corecrt_startup.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\math.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\vcruntime_startup.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\thirdparty.hpp
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl/ordered_set.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\deque
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\vector
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl\ordered_hash.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\algorithm
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\cassert
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\assert.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\cmath
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\iterator
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl/ordered_map.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\optional\tl\optional.hpp
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark/variant.hpp
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark\config.hpp
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark\in_place.hpp
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark\lib.hpp
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\string-view-lite\include\nonstd/string_view.hpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\cassert
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\assert.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\ostream
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\ios
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xlocnum
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\streambuf
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xiosbase
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\share.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xlocale
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xfacet
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xlocinfo
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xlocinfo.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\clocale
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\locale.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\rd_core_export.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime\Lifetime.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Modules/ModuleInterface.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\scheduler/SingleThreadScheduler.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\scheduler\base/SingleThreadSchedulerBase.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\scheduler/base/IScheduler.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\rd_framework_export.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/spdlog.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/common.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/tweakme.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/null_mutex.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/fmt/fmt.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/fmt/bundled/core.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/fmt/bundled/format.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/fmt/xchar.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/fmt/bundled/xchar.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/registry.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\unordered_map
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xhash
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\list
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xbit_ops.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/logger.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/log_msg.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/backtracer.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/log_msg_buffer.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/circular_q.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\cassert
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\assert.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/os.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/version.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/synchronous_factory.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RiderBlueprint\Public\BlueprintProvider.hpp
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RiderLink\Public\IRiderLink.hpp
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\RdEditorProtocol\RdEditorModel/RdEditorModel.Generated.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\protocol/Protocol.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/IProtocol.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base\IRdDynamic.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\impl/RName.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/Serializers.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\protocol/RdId.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\protocol/Buffer.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\types/DateTime.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util/core_util.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util\erase_if.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util\gen_util.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/allocator.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util\overloaded.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util\shared_function.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/to_string.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\sstream
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\istream
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\future
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\condition_variable
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\ppltasks.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\pplwin.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\pplinterface.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\ppltaskscheduler.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\crtdefs.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\pplcancellation_token.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\locale
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xlocbuf
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xlocmes
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xlocmon
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xloctime
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\codecvt
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\types/wrapper.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\iostream
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\cassert
+C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt\assert.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/list.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\util\hashing.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/ISerializable.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\protocol/Identities.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/IUnknownInstance.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/RdAny.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization\DefaultAbstractDeclaration.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/unordered_map.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\unordered_set
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/IWire.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive/base/interfaces.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/IRdReactive.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base\IRdBindable.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base\IRdWireable.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive/Property.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base/IProperty.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base\SignalX.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base\SignalCookie.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base\IPropertyBase.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime/SequentialLifetimes.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/SerializationCtx.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\regex
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\intern/InternRoot.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/RdReactiveBase.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/RdBindableBase.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\util\guards.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\intern\InternScheduler.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/InternedAnySerializer.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/SerializationCtx.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\impl/RdSignal.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/Polymorphic.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\impl/RdProperty.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/RdPropertyBase.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\impl/RdList.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive/ViewableList.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base/IViewableList.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base\viewable_collections.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\impl/RdSet.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive/ViewableSet.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base/IViewableSet.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\impl/RdMap.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive/ViewableMap.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base/IViewableMap.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/ISerializersOwner.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/NullableSerializer.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/AbstractPolymorphic.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\util\framework_traits.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/ArraySerializer.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/InternedSerializer.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\ext/RdExtBase.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\ext\ExtWire.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\queue
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task/RdCall.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task\RdTask.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task\RdTaskImpl.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task\RdTaskResult.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\scheduler/SynchronousScheduler.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task\WiredRdTask.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task\WiredRdTaskImpl.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task/RdEndpoint.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task/RdSymmetricCall.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util/enum.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\RdEditorProtocol\instantiations_RdEditorRoot.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library\UE4Library/UnrealLogEvent.Generated.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library\instantiations_UE4Library.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RiderLink\Public\UE4TypesMarshallers.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library\UE4Library/LogMessageInfo.Generated.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library\UE4Library/StringRange.Generated.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library\UE4Library/BlueprintReference.Generated.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library\UE4Library/UClass.Generated.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library\UE4Library/PlayState.Generated.h
+D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library\UE4Library/RequestResultBase.Generated.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Modules/ModuleManager.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Misc/CoreMisc.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Math/IntPoint.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\HAL/ThreadSingleton.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\HAL/TlsAutoCleanup.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Modules/Boilerplate/ModuleBoilerplate.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Internationalization/Regex.h
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Misc/DateTime.h
+D:/githubdesktop/BeforeDayLight/Plugins/Developer/RiderLink/Source/RiderLogging/Private/RiderOutputDevice.cpp
+D:\UE5\UE_5.0EA\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceRedirector.h

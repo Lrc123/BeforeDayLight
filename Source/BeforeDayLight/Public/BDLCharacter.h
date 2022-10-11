@@ -39,8 +39,8 @@ protected:
 
 	FTimerHandle TimerHandle_PrimaryAttack;
 	FTimerHandle TimerHandle_Dash;
+	FTimerHandle TimerHandle_Rotating;
 	float AttackAnimDelay = 0.2f;
-	
 
 
 public:
@@ -71,6 +71,8 @@ protected:
 	void AbilityUlt();
 	void AbilityUlt_TimeElapsed();
 
+	void Rotating_TimeElapsed();
+
 	void Dash();
 	void Dash_TimeElapsed();
 
@@ -82,6 +84,10 @@ protected:
 
 	UPROPERTY()
 	bool jumping;
+
+	
+	UPROPERTY()
+	bool rotating;
 
 	virtual void PostInitializeComponents() override;
 

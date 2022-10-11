@@ -8,9 +8,12 @@
 #include "Camera/CameraComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "BDLInteractionComponent.h"
-#include "DrawDebugHelpers.h"
-#include "Kismet/KismetMathLibrary.h"
-#include "Kismet/KismetSystemLibrary.h"
+#include "Kismet/GameplayStatics.h"
+
+
+
+
+#define PrintString(String) GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::White,String)
 
 // Sets default values
 ABDLCharacter::ABDLCharacter()
@@ -34,6 +37,7 @@ ABDLCharacter::ABDLCharacter()
 	bUseControllerRotationYaw = false;
 
 	jumping = false;
+	rotating = false;
 }
 
 // Called when the game starts or when spawned
@@ -101,10 +105,38 @@ void ABDLCharacter::AbilityUlt_TimeElapsed()
 	SpawnProjectile(BlackHoleProjectileClass);
 }
 
+void ABDLCharacter::Rotating_TimeElapsed()
+{
+	rotating = false;
+}
+
+
 void ABDLCharacter::SpawnProjectile(TSubclassOf<AActor> ClassToSpawn)
 {
 	if(ensureAlways(ClassToSpawn))
 	{
+		
+		FRotator ControlRot = GetControlRotation();
+		ControlRot.Pitch = 0.0f;
+		ControlRot.Roll = 0.0f;
+		const float deltaYaw = abs(ControlRot.Yaw - GetActorRotation().Yaw);
+		if(deltaYaw > 120)
+		{
+			rotating = true;
+			GetWorldTimerManager().SetTimer(
+				TimerHandle_Rotating, this, &ABDLCharacter::Rotating_TimeElapsed, 0.6f, false);
+		}
+		/*
+		FQuat CurRotation = FQuat(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0)->GetControlRotation());
+		FQuat CameraRotation = FQuat(CameraComp->GetComponentRotation());
+		PrintString(CurRotation.ToString());
+		PrintString(CameraRotation.ToString());
+		if(!CurRotation.Equals(CurRotation))
+		{
+			
+		}
+		*/
+		
 		FVector HandLocation = GetMesh()->GetSocketLocation("Muzzle_01");
 
 		FActorSpawnParameters SpawnParams;
@@ -212,10 +244,25 @@ void ABDLCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	PrintString(rotating + "");
+	
 	if (jumping) 
 	{
 		Jump();
 	}
+
+	FRotator ControlRot = GetControlRotation();
+	ControlRot.Pitch = 0.0f;
+	ControlRot.Roll = 0.0f;
+
+	FRotator NewRotation = FMath::RInterpTo(GetActorRotation(), ControlRot, 0.016f, 6.25f);
+	
+	if(rotating)
+	{
+		SetActorRotation(NewRotation);
+	}
+
+
 
 }
 
