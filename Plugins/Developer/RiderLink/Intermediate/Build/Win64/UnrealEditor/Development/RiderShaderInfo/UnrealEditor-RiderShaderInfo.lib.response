@@ -6,7 +6,6 @@
 /NAME:"UnrealEditor-RiderShaderInfo.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UnrealEditor\Development\RiderShaderInfo\RiderShaderInfo.cpp.obj"
-"D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UnrealEditor\Development\RiderShaderInfo\Default.rc2.res"
-/OUT:"D:\githubdesktop\BeforeDayLight\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UnrealEditor\Development\RiderShaderInfo\UnrealEditor-RiderShaderInfo.lib"
-/INCLUDE:IMPLEMENT_MODULE_RiderShaderInfo
+"D:\githubdesktop\BeforeDayLight 5.0\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UnrealEditor\Development\RiderShaderInfo\RiderShaderInfo.cpp.obj"
+"D:\githubdesktop\BeforeDayLight 5.0\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UnrealEditor\Development\RiderShaderInfo\Default.rc2.res"
+/OUT:"D:\githubdesktop\BeforeDayLight 5.0\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UnrealEditor\Development\RiderShaderInfo\UnrealEditor-RiderShaderInfo.lib"
