@@ -1,2 +1,5 @@
 # BeforeDayLight
-An experimental Rouglike Game
+An Third Person Rouglike shooting Game
+
+AI system with sight and hit sensing
+
