@@ -3,6 +3,8 @@
 
 #include "BDLAttributeComponent.h"
 
+#include "MathUtil.h"
+
 // Sets default values for this component's properties
 UBDLAttributeComponent::UBDLAttributeComponent() : MaxHealth(100.f), Health(MaxHealth)
 {
@@ -20,11 +22,48 @@ bool UBDLAttributeComponent::IsAlive()
 }
 
 
-bool UBDLAttributeComponent::ApplyHealthChange(float Delta)
+bool UBDLAttributeComponent::ApplyHealthChange(AActor* InstigatorActor, float Delta)
 {
-	Health += Delta;
+	float oldHealth = Health;
+	Health = FMathf::Clamp(Health + Delta, 0.0f, MaxHealth);
+	float deltaHealth = Health - oldHealth;
 
-	OnHealthChanged.Broadcast(nullptr, this, Health, Delta);
+	OnHealthChanged.Broadcast(InstigatorActor, this, Health, Delta);
 
-	return true;
+	return deltaHealth != 0;
 }
+
+bool UBDLAttributeComponent::IsFullHealth() const
+{
+	return MaxHealth == Health;
+}
+
+bool UBDLAttributeComponent::IsActorAlive(AActor* Actor)
+{
+	UBDLAttributeComponent* AttributeComp = GetAttributes(Actor);
+	if(AttributeComp)
+	{
+		return AttributeComp->IsAlive();
+	}
+	return false;
+}
+
+UBDLAttributeComponent* UBDLAttributeComponent::GetAttributes(AActor* FromActor)
+{
+	if(FromActor){
+		return FromActor->FindComponentByClass<UBDLAttributeComponent>();
+	}
+	return nullptr;
+}
+
+float UBDLAttributeComponent::GetMaxHealth() const
+{
+	return MaxHealth;
+}
+
+float UBDLAttributeComponent::GetCurHealth() const
+{
+	return Health;
+}
+
+

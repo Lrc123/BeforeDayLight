@@ -38,6 +38,7 @@ ABDLCharacter::ABDLCharacter()
 
 	jumping = false;
 	rotating = false;
+	TimeToHitParamName = "TimeToHit";
 }
 
 // Called when the game starts or when spawned
@@ -157,7 +158,7 @@ void ABDLCharacter::SpawnProjectile(TSubclassOf<AActor> ClassToSpawn)
 		FCollisionObjectQueryParams ObjParams;
 		ObjParams.AddObjectTypesToQuery(ECC_WorldDynamic);
 		ObjParams.AddObjectTypesToQuery(ECC_WorldStatic);
-		//ObjParams.AddObjectTypesToQuery(ECC_Pawn);
+		ObjParams.AddObjectTypesToQuery(ECC_Pawn);
 
 		
 		FRotator ProjRotation;
@@ -245,7 +246,7 @@ void ABDLCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	PrintString(rotating + "");
+	//PrintString(rotating + "");
 	
 	if (jumping) 
 	{
@@ -269,10 +270,15 @@ void ABDLCharacter::Tick(float DeltaTime)
 
 void ABDLCharacter::OnHealthChanged(AActor* InstigatorActor, UBDLAttributeComponent* OwningComp, float NewHealth, float Delta)
 {
+	if(Delta < 0.0f)
+	{
+		GetMesh()->SetScalarParameterValueOnMaterials(TimeToHitParamName, GetWorld()->TimeSeconds);
+	}
 	if(NewHealth <= 0.0f && Delta < 0.0f)
 	{
 		APlayerController* PC = Cast<APlayerController>(GetController());
 		DisableInput(PC);
+		SetLifeSpan(5.f);
 	}
 	
 }

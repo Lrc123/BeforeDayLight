@@ -20,6 +20,7 @@ ABDLExplosiveBarrel::ABDLExplosiveBarrel()
 	MeshComp->SetSimulatePhysics(true);
 	RootComponent = MeshComp;
 
+	AttributeComp = CreateDefaultSubobject<UBDLAttributeComponent>("AttributeComp");
 
 	RadialForceComp = CreateDefaultSubobject<URadialForceComponent>("RadialForce");
 	RadialForceComp->SetupAttachment(MeshComp);
@@ -35,10 +36,17 @@ ABDLExplosiveBarrel::ABDLExplosiveBarrel()
 	RadialForceComp->AddCollisionChannelToAffect(ECC_WorldDynamic);
 }
 
+void ABDLExplosiveBarrel::DestroyActorWithDelay()
+{
+	Destroy();
+}
+
+
 void ABDLExplosiveBarrel::PostInitializeComponents()
 {
 	Super::PostInitializeComponents();
 	//MeshComp->OnComponentHit.AddDynamic(this, &ABDLExplosiveBarrel::OnActorHit);
+	AttributeComp->OnHealthChanged.AddDynamic(this, &ABDLExplosiveBarrel::OnHealthChanged);
 }
 
 
@@ -46,8 +54,54 @@ void ABDLExplosiveBarrel::PostInitializeComponents()
 void ABDLExplosiveBarrel::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
+
+void ABDLExplosiveBarrel::OnHealthChanged(AActor* InstigatorActor, UBDLAttributeComponent* OwningComp, float NewHealth, float Delta)
+{
+	// float HP = AttributeComp->GetCurHealth();
+	// FString MyFloatString = FString::SanitizeFloat(HP); 
+	// PrintString(MyFloatString);
+	if(NewHealth <= 0.0f)
+	{
+		Explode();
+	}
+}
+
+void ABDLExplosiveBarrel::Explode()
+{
+	RadialForceComp->FireImpulse();
+	GetWorldTimerManager().SetTimer(DestroyTimerHandle, this, &ABDLExplosiveBarrel::DestroyActorWithDelay, DelayTime, false);
+	
+	TArray<FHitResult> HitResults;
+	FVector StartLocation = RadialForceComp->GetComponentLocation();
+	FCollisionShape CollisionShape = FCollisionShape::MakeSphere(RadialForceComp->Radius);
+
+	bool bHit = GetWorld()->SweepMultiByChannel(
+		HitResults,
+		StartLocation,
+		StartLocation,
+		FQuat::Identity,
+		ECC_Pawn,
+		CollisionShape);
+
+	if(bHit)
+	{
+		for(const FHitResult& HitResult : HitResults)
+		{
+			AActor* HitActor = HitResult.GetActor();
+			if(HitActor && HitActor != this)
+			{
+				UBDLAttributeComponent* CurAttributeComp = Cast<UBDLAttributeComponent>(HitActor->GetComponentByClass(UBDLAttributeComponent::StaticClass()));
+				if(CurAttributeComp && CurAttributeComp->IsAlive())
+				{
+					CurAttributeComp->ApplyHealthChange(GetInstigator(), -ExplodeDmg);
+				}
+			}
+		}
+		
+	}
+}
+
 
 
 void ABDLExplosiveBarrel::OnActorHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)

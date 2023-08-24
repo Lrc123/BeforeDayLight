@@ -5,6 +5,7 @@
 
 #include "BDLAttributeComponent.h"
 #include "Components/SphereComponent.h"
+#include "Kismet/GameplayStatics.h"
 
 
 // Sets default values
@@ -18,19 +19,38 @@ ABDLMagicProjectile::ABDLMagicProjectile()
 	
 }
 
-
-void ABDLMagicProjectile::OnActorOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult &SweepResult)
+void ABDLMagicProjectile::OnActorHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
+	Super::OnActorHit(HitComponent, OtherActor, OtherComp, NormalImpulse, Hit);
+	/*
 	if(OtherActor && OtherActor != GetInstigator())
 	{
 		UBDLAttributeComponent* AttributeComp = Cast<UBDLAttributeComponent>(OtherActor->GetComponentByClass(UBDLAttributeComponent::StaticClass()));
+		
 		if (AttributeComp)
 		{
 			Explode();
 			AttributeComp->ApplyHealthChange(-DamageAmount);
 			Destroy();
 		}
+	}
+	*/
+}
+
+
+
+void ABDLMagicProjectile::OnActorOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult &SweepResult)
+{
+	if(OtherActor && OtherActor != GetInstigator())
+	{
+		UBDLAttributeComponent* AttributeComp = Cast<UBDLAttributeComponent>(OtherActor->GetComponentByClass(UBDLAttributeComponent::StaticClass()));
 		
+		if (AttributeComp && AttributeComp->IsAlive())
+		{
+			Explode();
+			AttributeComp->ApplyHealthChange(GetInstigator(), -DamageAmount);
+			Destroy();
+		}
 	}
 }
 

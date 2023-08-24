@@ -23,6 +23,9 @@ class BEFOREDAYLIGHT_API ABDLCharacter : public ACharacter
 protected:
 	UPROPERTY(EditAnywhere, Category = "Attack")
 	TSubclassOf<AActor> ProjectileClass;
+	
+	UPROPERTY(EditAnywhere, Category = "Attack")
+	UAnimMontage* AttackAnim;
 
 	UPROPERTY(EditAnywhere, Category= "Ability")
 	TSubclassOf<AActor> BlackHoleProjectileClass;
@@ -30,13 +33,13 @@ protected:
 	UPROPERTY(EditAnywhere, Category= "Ability")
 	TSubclassOf<AActor> DashProjectileClass;
 
-	UPROPERTY(EditAnywhere, Category = "Attack")
-	UAnimMontage* AttackAnim;
-
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components")
 	UBDLAttributeComponent* AttributeComp;
+	/* VisibleAnywhere = read-only, still useful to view in-editor and enforce a convention. */
+	UPROPERTY(VisibleAnywhere, Category = "Effects")
+	FName TimeToHitParamName;
 
-
+	
 	FTimerHandle TimerHandle_PrimaryAttack;
 	FTimerHandle TimerHandle_Dash;
 	FTimerHandle TimerHandle_Rotating;
@@ -85,7 +88,6 @@ protected:
 	UPROPERTY()
 	bool jumping;
 
-	
 	UPROPERTY()
 	bool rotating;
 
@@ -100,7 +102,5 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
-	
 
 };

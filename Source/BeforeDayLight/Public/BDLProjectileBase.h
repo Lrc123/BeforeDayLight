@@ -10,18 +10,33 @@
 class USphereComponent;
 class UProjectileMovementComponent;
 class UParticleSystemComponent;
+class UCameraShakeBase;
 
 
-UCLASS()
+USTRUCT(BlueprintType)
+struct FProjectileSparseData 
+{
+	GENERATED_BODY()
+
+	FProjectileSparseData(): ImpactShakeInnerRadius(0.f),ImpactShakeOuterRadius(1500.f){}
+
+	UPROPERTY(EditDefaultsOnly, Category="Effects|Shake")
+	float ImpactShakeInnerRadius;
+	UPROPERTY(EditDefaultsOnly, Category="Effects|Shake")
+	float ImpactShakeOuterRadius;
+};
+
+
+UCLASS(Abstract, SparseClassDataTypes=ProjectileSparseData)
 class BEFOREDAYLIGHT_API ABDLProjectileBase : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
-	// Sets default values for this actor's properties
-	ABDLProjectileBase();
 
+	
 protected:
+
+	UPROPERTY(EditDefaultsOnly, Category = "Effects|Shake")
+	TSubclassOf<UCameraShakeBase> ImpactShake;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components")
 	USphereComponent* SphereComp;
@@ -35,20 +50,45 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category="Effects")
 	UParticleSystem* ImpactVFX;
 
+	UPROPERTY(EditDefaultsOnly, Category="Sounds")
+	USoundBase* ExplodeSound;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Config", meta=(AllowPrivateAccess = "true"))
 	float ForceStrength = 250.f;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Config", meta=(AllowPrivateAccess = "true"))
+	float LifeSpan = 4.5f;
 
+	FTimerHandle  TimeHandle_DestroySelf;
 
 	UFUNCTION()
-	void OnActorHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
+	virtual void OnActorHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 
-	
+	UFUNCTION()
+	void DestroySelf_TimeElapsed();
+
 	virtual void PostInitializeComponents() override;
-
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void Explode();
+	
+public:
+	ABDLProjectileBase();
+
+	virtual void BeginPlay() override;
+	
+#if WITH_EDITORONLY_DATA
+	UPROPERTY()
+	float ImpactShakeInnerRadius_DEPRECATED;
+	UPROPERTY()
+	float ImpactShakeOuterRadius_DEPRECATED;
+
+#endif
+	
+#if WITH_EDITOR
+public:
+	virtual void MoveDataToSparseClassDataStruct() const override;
+
+#endif
+
 };

@@ -4,6 +4,7 @@
 #include "BDLProjectileBase.h"
 
 #include "BDLCharacter.h"
+#include "AI/BDLAIController.h"
 #include "Components/SphereComponent.h"
 #include "Particles/ParticleSystemComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
@@ -34,6 +35,18 @@ ABDLProjectileBase::ABDLProjectileBase()
 
 }
 
+void ABDLProjectileBase::BeginPlay()
+{
+	Super::BeginPlay();
+	GetWorldTimerManager().SetTimer(TimeHandle_DestroySelf, this, &ABDLProjectileBase::DestroySelf_TimeElapsed, LifeSpan);
+}
+
+void ABDLProjectileBase::DestroySelf_TimeElapsed()
+{
+	Destroy();
+}
+
+
 void ABDLProjectileBase::OnActorHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
 	//if(!OtherActor->IsA(ABDLCharacter::StaticClass()))
@@ -48,18 +61,17 @@ void ABDLProjectileBase::OnActorHit(UPrimitiveComponent* HitComponent, AActor* O
 
 void ABDLProjectileBase::Explode_Implementation()
 {
-	if(ensure(!IsPendingKill()))
+	if(ensure(IsValid(this)))
 	{
 		UGameplayStatics::SpawnEmitterAtLocation(this, ImpactVFX, GetActorLocation(), GetActorRotation());
 		EffectComp->DeactivateSystem();
 		MovementComp->StopMovementImmediately();
 		SetActorEnableCollision(false);
-		
+		UGameplayStatics::PlaySoundAtLocation(this, ExplodeSound, GetActorLocation(),GetActorRotation());
+		UGameplayStatics::PlayWorldCameraShake(this, ImpactShake, GetActorLocation(), GetImpactShakeInnerRadius(), GetImpactShakeOuterRadius());
 		Destroy();
 	}
 }
-
-
 
 
 void ABDLProjectileBase::PostInitializeComponents()
@@ -68,12 +80,25 @@ void ABDLProjectileBase::PostInitializeComponents()
 
 }
 
-
-
-// Called every frame
-void ABDLProjectileBase::Tick(float DeltaTime)
+#if WITH_EDITOR
+void ABDLProjectileBase::MoveDataToSparseClassDataStruct() const
 {
-	Super::Tick(DeltaTime);
-	
+	const UBlueprintGeneratedClass* BPClass = Cast<UBlueprintGeneratedClass>(GetClass());
+	if(BPClass == nullptr || BPClass->bIsSparseClassDataSerializable == true)
+	{
+		return;
+	}
+	Super::MoveDataToSparseClassDataStruct();
+#if WITH_EDITORONLY_DATA
+	FProjectileSparseData* SparseClassData = GetProjectileSparseData();
+
+	SparseClassData->ImpactShakeInnerRadius = ImpactShakeInnerRadius_DEPRECATED;
+	SparseClassData->ImpactShakeOuterRadius = ImpactShakeOuterRadius_DEPRECATED;
+
+#endif
 }
+
+#endif
+
+
 
