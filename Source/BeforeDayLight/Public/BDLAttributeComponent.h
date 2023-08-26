@@ -38,10 +38,10 @@ public:
 
 protected:
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Attributes")
+	UPROPERTY(VisibleAnywhere,  Category="Attributes")
 	float MaxHealth = 100.f;
 	
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Attributes")
+	UPROPERTY(VisibleAnywhere,  Category="Attributes")
 	float Health = 100.f;
 	
 

@@ -26,6 +26,6 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category="UI")
 	AActor* AttachedActor;
 
-	UPROPERTY(BlueprintReadOnly, Category="UI")
+	UPROPERTY(EditDefaultsOnly, Category="UI")
 	FVector WorldOffset;
 };
