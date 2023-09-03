@@ -6,6 +6,9 @@
 #include "DrawDebugHelpers.h"
 #define PrintString(String) GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::White,String)
 
+static TAutoConsoleVariable<bool> CVarDebugDrawInteraction(
+	TEXT("bdl.InteractionDebugDraw"), false, TEXT("Enable Debug Lines for Interact Component."), ECVF_Cheat);
+
 // Sets default values for this component's properties
 UBDLInteractionComponent::UBDLInteractionComponent()
 {
@@ -23,12 +26,12 @@ void UBDLInteractionComponent::BeginPlay()
 	Super::BeginPlay();
 
 	// ...
-	
 }
 
 
 // Called every frame
-void UBDLInteractionComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+void UBDLInteractionComponent::TickComponent(float DeltaTime, ELevelTick TickType,
+                                             FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
@@ -37,6 +40,9 @@ void UBDLInteractionComponent::TickComponent(float DeltaTime, ELevelTick TickTyp
 
 void UBDLInteractionComponent::PrimaryInteract()
 {
+	bool bDebugDraw = CVarDebugDrawInteraction.GetValueOnGameThread();
+
+
 	FCollisionObjectQueryParams ObjectQueryParams;
 	ObjectQueryParams.AddObjectTypesToQuery(ECC_WorldDynamic);
 	AActor* MyOwner = GetOwner();
@@ -45,7 +51,7 @@ void UBDLInteractionComponent::PrimaryInteract()
 	FRotator EyeRotation;
 
 	MyOwner->GetActorEyesViewPoint(EyeLocation, EyeRotation);
-	
+
 	FVector End = EyeLocation + (EyeRotation.Vector() * 1000);
 
 	/*
@@ -59,12 +65,15 @@ void UBDLInteractionComponent::PrimaryInteract()
 	FCollisionShape Shape;
 	Shape.SetSphere(Radius);
 
-	bool bBlockingHit = GetWorld()->SweepMultiByObjectType(Hits, EyeLocation, End, FQuat::Identity, ObjectQueryParams, Shape);
+	bool bBlockingHit = GetWorld()->SweepMultiByObjectType(Hits, EyeLocation, End, FQuat::Identity, ObjectQueryParams,
+	                                                       Shape);
 
-	FColor LineColor = bBlockingHit ? FColor::Red : FColor::Green;
+	FColor LineColor = bBlockingHit ? FColor::Green : FColor::Red;
 
-	for (FHitResult Hit : Hits) {
-
+	for (FHitResult Hit : Hits)
+	{
+		if (bDebugDraw)
+			DrawDebugSphere(GetWorld(), Hit.ImpactPoint, Radius, 32, LineColor, false, 2.0f);
 		AActor* HitActor = Hit.GetActor();
 		if (HitActor)
 		{
@@ -72,13 +81,11 @@ void UBDLInteractionComponent::PrimaryInteract()
 			{
 				APawn* MyPawn = Cast<APawn>(MyOwner);
 				IBDLGamePlayInterface::Execute_Interact(HitActor, MyPawn);
-				DrawDebugSphere(GetWorld(), Hit.ImpactPoint, Radius, 32, LineColor, false, 2.0f);
 				break;
 			}
 		}
-
 	}
 
-	DrawDebugLine(GetWorld(), EyeLocation, End, LineColor, false, 2.0f, 0, 2.0f);
-
+	if (bDebugDraw)
+		DrawDebugLine(GetWorld(), EyeLocation, End, LineColor, false, 2.0f, 0, 2.0f);
 }

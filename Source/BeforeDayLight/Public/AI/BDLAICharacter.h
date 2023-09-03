@@ -52,6 +52,11 @@ protected:
 
 	UFUNCTION()
 	void SetTargetActor(AActor* NewTarget);
-	
+
+
+private:
+	FTimerHandle TimerHandle_LostTarget;
+	UFUNCTION()
+	void LostTarget();
 
 };

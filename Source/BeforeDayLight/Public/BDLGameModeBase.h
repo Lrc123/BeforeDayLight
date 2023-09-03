@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "BDLCharacter.h"
 #include "EnvironmentQuery/EnvQuery.h"
 #include "GameFramework/GameModeBase.h"
 #include "BDLGameModeBase.generated.h"
@@ -22,6 +23,9 @@ public:
 	ABDLGameModeBase();
 	
 	virtual  void StartPlay() override;
+	
+	UFUNCTION()
+	void OnActorKilled(AActor* VictimActor, AActor* Killer);
 	
 protected:
 
@@ -43,5 +47,12 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly)
 	UCurveFloat* DifficultyCurve;
+
+	UFUNCTION(Exec)
+	void KillAllAI();
+
+	UFUNCTION()
+	void RespawnPlayerElapsed(AController* Controller);
+
 	
 };

@@ -38,16 +38,15 @@ public:
 
 protected:
 
-	UPROPERTY(VisibleAnywhere,  Category="Attributes")
+	UPROPERTY(EditDefaultsOnly,  Category="Attributes")
 	float MaxHealth = 100.f;
 	
-	UPROPERTY(VisibleAnywhere,  Category="Attributes")
+	UPROPERTY(EditDefaultsOnly,  Category="Attributes")
 	float Health = 100.f;
-	
 
 public:
 
-	UPROPERTY(BlueprintAssignable)
+	UPROPERTY(BlueprintAssignable, Category="Delegates")
 	FOnHealthChanged OnHealthChanged;
 
 	UFUNCTION(BlueprintCallable, Category="Attributes")
@@ -55,6 +54,10 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	bool IsAlive();
+
+	UFUNCTION(BlueprintCallable)
+	bool Kill(AActor* InstigatorActor);
+	
 		
 };
 

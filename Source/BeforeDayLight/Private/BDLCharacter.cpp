@@ -290,6 +290,12 @@ void ABDLCharacter::PostInitializeComponents()
 	AttributeComp->OnHealthChanged.AddDynamic(this, &ABDLCharacter::OnHealthChanged);
 }
 
+void ABDLCharacter::HealSelf(float amount /*=100*/)
+{
+	AttributeComp->ApplyHealthChange(this, amount);
+}
+
+
 
 // Called to bind functionality to input
 void ABDLCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)

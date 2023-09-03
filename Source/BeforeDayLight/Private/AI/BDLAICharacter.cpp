@@ -5,6 +5,7 @@
 
 #include "BDLWorldUserWidget.h"
 #include "BrainComponent.h"
+#include "../../../../Plugins/Developer/RiderLink/Source/RD/thirdparty/clsocket/src/StatTimer.h"
 #include "AI/BDLAIController.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "Blueprint/UserWidget.h"
@@ -70,6 +71,17 @@ void ABDLAICharacter::OnHealthChanged(AActor* InstigatorActor, UBDLAttributeComp
 			SetLifeSpan(10.0f);
 		}
 	}
+	
+	//DrawDebugString(GetWorld(), GetActorLocation(), "Health Changed", nullptr, FColor::White, 4.0f, true);
+
+	bool IsLowHealth = AttributeComp->GetCurHealth() / AttributeComp->GetMaxHealth() < 0.5f;
+	ABDLAIController* AIC = Cast<ABDLAIController>(GetController());
+	if(AIC)
+	{
+		 UBlackboardComponent* BBComp = AIC->GetBlackboardComponent();
+
+		 BBComp->SetValueAsBool("IsLowHealth", IsLowHealth);
+	}
 }
 
 void ABDLAICharacter::DestroySelf_TimeElapsed()
@@ -77,11 +89,17 @@ void ABDLAICharacter::DestroySelf_TimeElapsed()
 	Destroy();
 }
 
+void ABDLAICharacter::LostTarget()
+{
+	SetTargetActor(nullptr);
+}
+
 
 void ABDLAICharacter::OnPawnSeen(APawn* Pawn)
 {
 	SetTargetActor(Pawn);
-	DrawDebugString(GetWorld(), GetActorLocation(), "PLAYER SPOTTED", nullptr, FColor::White, 4.0f, true);
+	GetWorldTimerManager().SetTimer(TimerHandle_LostTarget, this, &ABDLAICharacter::LostTarget ,5);
+	//DrawDebugString(GetWorld(), GetActorLocation(), "PLAYER SPOTTED", nullptr, FColor::White, 4.0f, true);
 }
 
 void ABDLAICharacter::SetTargetActor(AActor* NewTarget)
