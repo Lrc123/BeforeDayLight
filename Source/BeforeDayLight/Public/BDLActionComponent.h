@@ -3,7 +3,6 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "BDLAction.h"
 #include "GameplayTagContainer.h"
 #include "Components/ActorComponent.h"
 #include "BDLActionComponent.generated.h"
@@ -17,12 +16,9 @@ class BEFOREDAYLIGHT_API UBDLActionComponent : public UActorComponent
 
 public:
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Tags")
-	FGameplayTagContainer GrantsTags;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Tags")
+	FGameplayTagContainer ActiveGameplayTags;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Tags")
-	FGameplayTagContainer BlockTags;
-	
 	UFUNCTION(BlueprintCallable, Category="Actions")
 	void AddAction(TSubclassOf<UBDLAction> ActionClass);
 
