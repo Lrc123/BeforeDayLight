@@ -4,6 +4,7 @@
 #include "BDLMagicProjectile.h"
 
 #include "BDLAttributeComponent.h"
+#include "BDLGameplayFunctionLibrary.h"
 #include "Components/SphereComponent.h"
 #include "Kismet/GameplayStatics.h"
 
@@ -43,6 +44,8 @@ void ABDLMagicProjectile::OnActorOverlap(UPrimitiveComponent* OverlappedComponen
 {
 	if(OtherActor && OtherActor != GetInstigator())
 	{
+		UE_LOG(LogTemp, Log, TEXT("Instigator is : %s"), *GetNameSafe(GetInstigator()));
+		/*
 		UBDLAttributeComponent* AttributeComp = Cast<UBDLAttributeComponent>(OtherActor->GetComponentByClass(UBDLAttributeComponent::StaticClass()));
 		
 		if (AttributeComp && AttributeComp->IsAlive())
@@ -50,6 +53,12 @@ void ABDLMagicProjectile::OnActorOverlap(UPrimitiveComponent* OverlappedComponen
 			Explode();
 			AttributeComp->ApplyHealthChange(GetInstigator(), -DamageAmount);
 			Destroy();
+		}
+		*/
+		if(UBDLGameplayFunctionLibrary::ApplyDirectionalDamage(GetInstigator(), OtherActor, DamageAmount, SweepResult))
+		{
+			Explode();
+			//Destroy();
 		}
 	}
 }

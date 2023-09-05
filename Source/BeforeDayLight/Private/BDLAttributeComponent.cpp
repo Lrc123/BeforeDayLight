@@ -15,9 +15,6 @@ UBDLAttributeComponent::UBDLAttributeComponent() : MaxHealth(100.f), Health(MaxH
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
-
-
-	// ...
 }
 
 bool UBDLAttributeComponent::Kill(AActor* InstigatorActor)
@@ -34,10 +31,17 @@ bool UBDLAttributeComponent::IsAlive()
 
 bool UBDLAttributeComponent::ApplyHealthChange(AActor* InstigatorActor, float Delta)
 {
-	if(!GetOwner()->CanBeDamaged())
+	if(!GetOwner()->CanBeDamaged() && Delta < 0.f)
 	{
 		return false;
 	}
+
+	/*
+	if(InstigatorActor == GetOwner()->GetInstigator())
+	{
+		return false;
+	}
+	*/
 	
 	if(Delta < 0.0f)
 	{

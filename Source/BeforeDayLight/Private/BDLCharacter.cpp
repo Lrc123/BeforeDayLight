@@ -3,6 +3,7 @@
 
 #include "BDLCharacter.h"
 
+#include "BDLActionComponent.h"
 #include "BDLDashProjectile.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
@@ -31,6 +32,7 @@ ABDLCharacter::ABDLCharacter()
 	InteractionComp = CreateDefaultSubobject<UBDLInteractionComponent>("InteractionComp");
 
 	AttributeComp = CreateDefaultSubobject<UBDLAttributeComponent>("AttributeComp");
+	ActionComp = CreateDefaultSubobject<UBDLActionComponent>("ActionComp");
 
 	GetCharacterMovement()->bOrientRotationToMovement = true;
 
@@ -47,6 +49,17 @@ void ABDLCharacter::BeginPlay()
 	Super::BeginPlay();
 	
 }
+
+void ABDLCharacter::SprintStart()
+{
+	ActionComp->StartActionByName(this, "Sprint");
+}
+
+void ABDLCharacter::SprintStop()
+{
+	ActionComp->StopActionByName(this, "Sprint");
+}
+
 
 void ABDLCharacter::MoveForward(float value)
 {
@@ -68,18 +81,39 @@ void ABDLCharacter::MoveRight(float value)
 	AddMovementInput(RightVector, value);
 }
 
+void ABDLCharacter::AdjustDirection()
+{
+	FRotator ControlRot = GetControlRotation();
+	const float deltaYaw = abs(ControlRot.Yaw - GetActorRotation().Yaw);
+	if(deltaYaw > 89)
+	{
+		 rotating = true;
+		 GetWorldTimerManager().SetTimer(
+			 TimerHandle_Rotating, this, &ABDLCharacter::Rotating_TimeElapsed, 0.6f, false);
+	}
+}
+
+
 void ABDLCharacter::PrimaryAttack()
 {
-	PlayAnimMontage(AttackAnim);
+	AdjustDirection();
 
+	ActionComp->StartActionByName(this, "PrimaryAttack");
+	/*
+	PlayAnimMontage(AttackAnim);
 	GetWorldTimerManager().SetTimer(TimerHandle_PrimaryAttack, this, &ABDLCharacter::PrimaryAttack_TimeElapsed, AttackAnimDelay);
+	*/
 
 }
 
 void ABDLCharacter::AbilityUlt()
 {
+	AdjustDirection();
+	ActionComp->StartActionByName(this, "BlackHole");
+	/*
 	PlayAnimMontage(AttackAnim);
 	GetWorldTimerManager().SetTimer(TimerHandle_PrimaryAttack, this, &ABDLCharacter::AbilityUlt_TimeElapsed, AttackAnimDelay);
+	*/
 }
 
 void ABDLCharacter::Dash()
@@ -100,15 +134,14 @@ void ABDLCharacter::Dash_TimeElapsed()
 }
 
 
-
-void ABDLCharacter::AbilityUlt_TimeElapsed()
-{
-	SpawnProjectile(BlackHoleProjectileClass);
-}
-
 void ABDLCharacter::Rotating_TimeElapsed()
 {
 	rotating = false;
+}
+
+FVector ABDLCharacter::GetPawnViewLocation() const
+{
+	return CameraComp->GetComponentLocation();
 }
 
 
@@ -116,28 +149,6 @@ void ABDLCharacter::SpawnProjectile(TSubclassOf<AActor> ClassToSpawn)
 {
 	if(ensureAlways(ClassToSpawn))
 	{
-		
-		FRotator ControlRot = GetControlRotation();
-		ControlRot.Pitch = 0.0f;
-		ControlRot.Roll = 0.0f;
-		const float deltaYaw = abs(ControlRot.Yaw - GetActorRotation().Yaw);
-		if(deltaYaw > 120)
-		{
-			rotating = true;
-			GetWorldTimerManager().SetTimer(
-				TimerHandle_Rotating, this, &ABDLCharacter::Rotating_TimeElapsed, 0.6f, false);
-		}
-		/*
-		FQuat CurRotation = FQuat(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0)->GetControlRotation());
-		FQuat CameraRotation = FQuat(CameraComp->GetComponentRotation());
-		PrintString(CurRotation.ToString());
-		PrintString(CameraRotation.ToString());
-		if(!CurRotation.Equals(CurRotation))
-		{
-			
-		}
-		*/
-		
 		FVector HandLocation = GetMesh()->GetSocketLocation("Muzzle_01");
 
 		FActorSpawnParameters SpawnParams;
@@ -186,7 +197,7 @@ void ABDLCharacter::SpawnProjectile(TSubclassOf<AActor> ClassToSpawn)
 
 void ABDLCharacter::PrimaryAttack_TimeElapsed()
 {
-	SpawnProjectile(ProjectileClass);
+	//SpawnProjectile(ProjectileClass);
 	/*
 	
 	FVector HandLocation = GetMesh()->GetSocketLocation("Muzzle_01");
@@ -318,6 +329,9 @@ void ABDLCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 	PlayerInputComponent->BindAction("PrimaryInteract", IE_Pressed, this, &ABDLCharacter::PrimaryInteract);
 
 	PlayerInputComponent->BindAction("Dash", IE_Pressed, this, &ABDLCharacter::Dash);
+
+	PlayerInputComponent->BindAction("Sprint", IE_Pressed, this, &ABDLCharacter::SprintStart);
+	PlayerInputComponent->BindAction("Sprint", IE_Released, this, &ABDLCharacter::SprintStop);
 
 }
 

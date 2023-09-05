@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "BDLActionComponent.h"
 #include "BDLAttributeComponent.h"
 #include "BDLDashProjectile.h"
 #include "GameFramework/Character.h"
@@ -13,7 +14,7 @@ class USpringArmComponent;
 class UBDLInteractionComponent;
 class UAnimMontage;
 class ABDLDashProjectile;
-
+class UBDLAttributeComponent;
 
 UCLASS()
 class BEFOREDAYLIGHT_API ABDLCharacter : public ACharacter
@@ -22,13 +23,7 @@ class BEFOREDAYLIGHT_API ABDLCharacter : public ACharacter
 
 protected:
 	UPROPERTY(EditAnywhere, Category = "Attack")
-	TSubclassOf<AActor> ProjectileClass;
-	
-	UPROPERTY(EditAnywhere, Category = "Attack")
 	UAnimMontage* AttackAnim;
-
-	UPROPERTY(EditAnywhere, Category= "Ability")
-	TSubclassOf<AActor> BlackHoleProjectileClass;
 	
 	UPROPERTY(EditAnywhere, Category= "Ability")
 	TSubclassOf<AActor> DashProjectileClass;
@@ -39,11 +34,14 @@ protected:
 	UPROPERTY(VisibleAnywhere, Category = "Effects")
 	FName TimeToHitParamName;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components")
+	UBDLActionComponent* ActionComp;
+
+	UPROPERTY(EditAnywhere, Category="Attack")
+	float AttackAnimDelay = 0.2f;
 	
-	FTimerHandle TimerHandle_PrimaryAttack;
 	FTimerHandle TimerHandle_Dash;
 	FTimerHandle TimerHandle_Rotating;
-	float AttackAnimDelay = 0.2f;
 
 
 public:
@@ -67,14 +65,17 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	void SprintStart();
+	void SprintStop();
+
 	void MoveForward(float value);
 	void MoveRight(float value);
 	void PrimaryAttack();
 	void PrimaryAttack_TimeElapsed();
 	void AbilityUlt();
-	void AbilityUlt_TimeElapsed();
 
 	void Rotating_TimeElapsed();
+	void AdjustDirection();
 
 	void Dash();
 	void Dash_TimeElapsed();
@@ -92,6 +93,8 @@ protected:
 	bool rotating;
 
 	virtual void PostInitializeComponents() override;
+
+	virtual FVector GetPawnViewLocation() const override;
 
 	UFUNCTION()
 	void OnHealthChanged(AActor* InstigatorActor, UBDLAttributeComponent* OwningComp, float NewHealth, float Delta);

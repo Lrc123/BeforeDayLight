@@ -27,6 +27,7 @@ EBTNodeResult::Type UBDLBTTask_RangedAttack::ExecuteTask(UBehaviorTreeComponent&
 		}
 
 		FVector MuzzleLocation = MyPawn->GetMesh()->GetSocketLocation("Muzzle_01");
+		DrawDebugSphere(GetWorld(), MuzzleLocation, 8.f, 12, FColor::Blue, false, 2.f, 0, 1);
 
 		AActor* TargetActor = Cast<AActor>(OwnerComp.GetBlackboardComponent()->GetValueAsObject("TargetActor"));
 		if(TargetActor == nullptr)
@@ -43,7 +44,8 @@ EBTNodeResult::Type UBDLBTTask_RangedAttack::ExecuteTask(UBehaviorTreeComponent&
 		MuzzleRotation.Yaw += FMath::RandRange(-MaxBulletSpread, MaxBulletSpread);
 
 		FActorSpawnParameters Params;
-		Params.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+		Params.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
+		Params.Instigator = MyPawn;
 
 		AActor* NewProj = GetWorld()->SpawnActor<AActor>(ProjectileClass, MuzzleLocation, MuzzleRotation, Params);
 		return NewProj ? EBTNodeResult::Succeeded : EBTNodeResult::Failed;
