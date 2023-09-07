@@ -24,6 +24,9 @@ protected:
 	
 	UPROPERTY(EditAnywhere, Category="Attack")
 	float AttackAnimDelay = 0.2f;
+	
+	UPROPERTY(EditAnywhere, Category="Attack")
+	float AttackCoolDown = 0.5f;
 
 	UPROPERTY(EditAnywhere, Category="Attack")
 	UParticleSystem* CastingEffect;

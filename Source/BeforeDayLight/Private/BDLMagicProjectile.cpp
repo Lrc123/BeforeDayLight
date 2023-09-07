@@ -3,9 +3,11 @@
 
 #include "BDLMagicProjectile.h"
 
+#include "BDLActionComponent.h"
 #include "BDLAttributeComponent.h"
 #include "BDLGameplayFunctionLibrary.h"
 #include "Components/SphereComponent.h"
+#include "GameFramework/ProjectileMovementComponent.h"
 #include "Kismet/GameplayStatics.h"
 
 
@@ -45,9 +47,9 @@ void ABDLMagicProjectile::OnActorOverlap(UPrimitiveComponent* OverlappedComponen
 	if(OtherActor && OtherActor != GetInstigator())
 	{
 		UE_LOG(LogTemp, Log, TEXT("Instigator is : %s"), *GetNameSafe(GetInstigator()));
+		
 		/*
 		UBDLAttributeComponent* AttributeComp = Cast<UBDLAttributeComponent>(OtherActor->GetComponentByClass(UBDLAttributeComponent::StaticClass()));
-		
 		if (AttributeComp && AttributeComp->IsAlive())
 		{
 			Explode();
@@ -55,6 +57,13 @@ void ABDLMagicProjectile::OnActorOverlap(UPrimitiveComponent* OverlappedComponen
 			Destroy();
 		}
 		*/
+		UBDLActionComponent* ActionComp = Cast<UBDLActionComponent>(OtherActor->GetComponentByClass(UBDLActionComponent::StaticClass()));
+		if(ActionComp && ActionComp->ActiveGameplayTags.HasTag(ParryTag))
+		{
+			MovementComp->Velocity = -MovementComp->Velocity;
+			SetInstigator(Cast<APawn>(OtherActor));
+			return;
+		}
 		if(UBDLGameplayFunctionLibrary::ApplyDirectionalDamage(GetInstigator(), OtherActor, DamageAmount, SweepResult))
 		{
 			Explode();

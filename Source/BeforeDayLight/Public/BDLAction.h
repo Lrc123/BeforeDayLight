@@ -36,13 +36,13 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Action")
 	bool GetIsRunning();
 	
-	UFUNCTION(BlueprintNativeEvent, Category="Action")
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category="Action")
 	bool CanStart(AActor* Instigator);
 
-	UFUNCTION(BlueprintNativeEvent, Category="Action")
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category="Action")
 	void StartAction(AActor* Instigator);
 	
-	UFUNCTION(BlueprintNativeEvent, Category="Action")
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category="Action")
 	void StopAction(AActor* Instigator);
 
 	/*use Fname to refer via name instead of using hard reference*/

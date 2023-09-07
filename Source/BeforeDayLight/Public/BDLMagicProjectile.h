@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "BDLProjectileBase.h"
+#include "GameplayTagContainer.h"
 #include "BDLMagicProjectile.generated.h"
 
 
@@ -23,6 +24,9 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, Category="Damage")
 	float DamageAmount = 10.f;
+
+	UPROPERTY(EditDefaultsOnly, Category="Damage")
+	FGameplayTag ParryTag;
 
 	UFUNCTION()
 	void OnActorHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit) override; 

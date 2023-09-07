@@ -69,7 +69,13 @@ void UBDLAction_ProjectileAttack::AttackDelay_Elapsed(ACharacter* InstigatorChar
 		FTransform SpawnTM = FTransform(ProjRotation, HandLocation);
 		GetWorld()->SpawnActor<AActor>(ProjectileClass, SpawnTM, SpawnParams);
 	}
-	StopAction(InstigatorCharacter);
+
+	FTimerHandle TimerHandle_AttackCoolDown;
+	GetWorld()->GetTimerManager().SetTimer(TimerHandle_AttackCoolDown,[this, InstigatorCharacter]()
+	{
+		StopAction(InstigatorCharacter);
+	},  AttackCoolDown, false);
+	//StopAction(InstigatorCharacter);
 }
 
 
