@@ -20,7 +20,14 @@ public:
 	FGameplayTagContainer ActiveGameplayTags;
 
 	UFUNCTION(BlueprintCallable, Category="Actions")
-	void AddAction(TSubclassOf<UBDLAction> ActionClass);
+	void AddAction(AActor* Instigator, TSubclassOf<UBDLAction> ActionClass);
+	
+	UFUNCTION(BlueprintCallable, Category="Actions")
+	void RemoveAction(UBDLAction* ActionToRemove);
+
+	/* Returns first occurance of action matching the class provided */
+	UFUNCTION(BlueprintCallable, Category = "Actions")
+	UBDLAction* GetAction(TSubclassOf<UBDLAction> ActionClass) const;
 
 	UFUNCTION(BlueprintCallable, Category="Actions")
 	bool StartActionByName(AActor* Instigator, FName ActionName);
@@ -31,15 +38,23 @@ public:
 	UBDLActionComponent();
 
 protected:
-	UPROPERTY()
+	UPROPERTY(Replicated)
 	TArray<UBDLAction*> Actions;
 
 	UPROPERTY(EditAnywhere, Category="Actions")
 	TArray<TSubclassOf<UBDLAction>> DefaultActions;
+
+	UFUNCTION(Server, Reliable)
+	void ServerStartAction(AActor* Instigator, FName ActionName);
+	
+	UFUNCTION(Server, Reliable)
+	void ServerStopAction(AActor* Instigator, FName ActionName);
 	
 	virtual void BeginPlay() override;
 
 public:
+	bool ReplicateSubobjects(UActorChannel* Channel, FOutBunch* Bunch, FReplicationFlags* RepFlags) override;
+	
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType,
 	                           FActorComponentTickFunction* ThisTickFunction) override;
 };

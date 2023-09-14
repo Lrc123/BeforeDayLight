@@ -4,11 +4,11 @@
 #include "BDLMagicProjectile.h"
 
 #include "BDLActionComponent.h"
-#include "BDLAttributeComponent.h"
 #include "BDLGameplayFunctionLibrary.h"
 #include "Components/SphereComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Kismet/GameplayStatics.h"
+#include "BDLActionEffect.h"
 
 
 // Sets default values
@@ -68,6 +68,10 @@ void ABDLMagicProjectile::OnActorOverlap(UPrimitiveComponent* OverlappedComponen
 		{
 			Explode();
 			//Destroy();
+			if(ActionComp && HasAuthority())
+			{
+				ActionComp->AddAction(GetInstigator(), BurningActionClass);
+			}
 		}
 	}
 }

@@ -20,8 +20,11 @@ public:
 protected:
 	virtual void BeginPlay() override;
 
-	UPROPERTY()
+	UPROPERTY(EditAnywhere, ReplicatedUsing="OnRep_IsActive", Category="Attributes")
 	bool bIsActive;
+
+	UFUNCTION()
+	void OnRep_IsActive();
 
 	UPROPERTY(EditAnywhere, Category="Powerup")
 	float RespawnTime;

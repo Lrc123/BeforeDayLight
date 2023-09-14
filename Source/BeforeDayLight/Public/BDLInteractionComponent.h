@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "BDLWorldUserWidget.h"
 #include "Components/ActorComponent.h"
 #include "BDLInteractionComponent.generated.h"
 
@@ -19,6 +20,29 @@ public:
 	UBDLInteractionComponent();
 
 protected:
+
+	UFUNCTION(Server, Reliable)
+	void ServerInteract(AActor* InFocus);
+
+	UPROPERTY()
+	AActor* FocusedActor;
+
+	UPROPERTY(EditDefaultsOnly, Category="Trace")
+	float TraceDistance;
+	
+	UPROPERTY(EditDefaultsOnly, Category="Trace")
+	float TraceRadius;
+
+	UPROPERTY(EditDefaultsOnly, Category="Trace")
+	TEnumAsByte<ECollisionChannel> CollisionChannel;
+
+	UPROPERTY(EditDefaultsOnly, Category="UI")
+	TSubclassOf<UBDLWorldUserWidget> DefaultWidgetClass;
+	
+	UPROPERTY()
+	UBDLWorldUserWidget* DefaultWidgetInstance;
+	
+	void FindBestInteractable();
 	// Called when the game starts
 	virtual void BeginPlay() override;
 

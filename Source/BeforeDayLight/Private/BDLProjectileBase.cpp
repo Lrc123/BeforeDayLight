@@ -31,7 +31,7 @@ ABDLProjectileBase::ABDLProjectileBase()
 	MovementComp->bRotationFollowsVelocity = true;
 	MovementComp->bInitialVelocityInLocalSpace = true;
 
-
+	bReplicates = true;
 
 }
 

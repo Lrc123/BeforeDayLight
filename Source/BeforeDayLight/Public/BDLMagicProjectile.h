@@ -7,7 +7,7 @@
 #include "GameplayTagContainer.h"
 #include "BDLMagicProjectile.generated.h"
 
-
+class UBDLActionEffect;
 
 UCLASS()
 class BEFOREDAYLIGHT_API ABDLMagicProjectile : public ABDLProjectileBase
@@ -27,6 +27,9 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, Category="Damage")
 	FGameplayTag ParryTag;
+
+	UPROPERTY(EditDefaultsOnly, Category="Damage")
+	TSubclassOf<UBDLActionEffect> BurningActionClass;
 
 	UFUNCTION()
 	void OnActorHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit) override; 

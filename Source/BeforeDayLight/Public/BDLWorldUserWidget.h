@@ -23,9 +23,9 @@ protected:
 	virtual void NativeTick(const FGeometry& MyGeometry, float InDeltaTime) override;
 	
 public:
-	UPROPERTY(BlueprintReadOnly, Category="UI")
+	UPROPERTY(BlueprintReadWrite, Category="UI", meta=(ExposeOnSpawn=true))
 	AActor* AttachedActor;
 
-	UPROPERTY(EditDefaultsOnly, Category="UI")
+	UPROPERTY(EditAnywhere, Category="UI")
 	FVector WorldOffset;
 };

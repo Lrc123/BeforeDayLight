@@ -41,6 +41,13 @@ protected:
 	UPROPERTY(VisibleAnywhere, Category = "Effects")
 	FName TimeToHitParamName;
 
+	UPROPERTY(EditDefaultsOnly, Category="UI")
+	TSubclassOf<UUserWidget> SpottedWidgetClass;
+	
+	UPROPERTY(EditDefaultsOnly, Category="Effects")
+	FName TargetActorKey;
+
+
 	UFUNCTION()
 	void OnHealthChanged(AActor* InstigatorActor, UBDLAttributeComponent* OwningComp, float NewHealth, float Delta);
 
@@ -50,9 +57,11 @@ protected:
 	UFUNCTION()
 	void OnPawnSeen(APawn* Pawn);
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable, Category="AI")
 	void SetTargetActor(AActor* NewTarget);
 
+	UFUNCTION(BlueprintCallable, Category = "AI")
+	AActor* GetTargetActor() const;
 
 private:
 	FTimerHandle TimerHandle_LostTarget;

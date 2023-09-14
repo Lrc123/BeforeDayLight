@@ -85,7 +85,7 @@ void ABDLCharacter::AdjustDirection()
 {
 	FRotator ControlRot = GetControlRotation();
 	const float deltaYaw = abs(ControlRot.Yaw - GetActorRotation().Yaw);
-	if(deltaYaw > 89)
+	if(deltaYaw > 90)
 	{
 		 rotating = true;
 		 GetWorldTimerManager().SetTimer(
@@ -270,12 +270,11 @@ void ABDLCharacter::Tick(float DeltaTime)
 
 	FRotator NewRotation = FMath::RInterpTo(GetActorRotation(), ControlRot, 0.016f, 6.25f);
 	
+	//SetActorRotation(NewRotation);
 	if(rotating)
 	{
 		SetActorRotation(NewRotation);
 	}
-
-
 
 }
 
@@ -284,6 +283,8 @@ void ABDLCharacter::OnHealthChanged(AActor* InstigatorActor, UBDLAttributeCompon
 	if(Delta < 0.0f)
 	{
 		GetMesh()->SetScalarParameterValueOnMaterials(TimeToHitParamName, GetWorld()->TimeSeconds);
+		float RageDelta = AttributeComp->GetDmgToRageFactor() * FMath::Abs(Delta);
+		AttributeComp->ApplyRageChange(InstigatorActor, RageDelta);
 	}
 	if(NewHealth <= 0.0f && Delta < 0.0f)
 	{

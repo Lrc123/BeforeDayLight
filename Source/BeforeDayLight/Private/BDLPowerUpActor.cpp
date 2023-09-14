@@ -3,6 +3,8 @@
 
 #include "BDLPowerUpActor.h"
 
+#include "Net/UnrealNetwork.h"
+
 // Sets default values
 ABDLPowerUpActor::ABDLPowerUpActor()
 {
@@ -53,6 +55,19 @@ void ABDLPowerUpActor::Interact_Implementation(APawn* InstigatorPawn)
 	
 }
 
+void ABDLPowerUpActor::OnRep_IsActive()
+{
+	SetPowerupState(bIsActive);
+}
+
+
+void ABDLPowerUpActor::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(ABDLPowerUpActor, bIsActive);
+	
+}
 
 
 

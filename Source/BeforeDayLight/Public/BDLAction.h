@@ -10,6 +10,20 @@
 class UWorld;
 class UBDLActionComponent;
 
+// using a struct can make sure the data would be arrived at the same time
+USTRUCT()
+struct FActionRepData
+{
+	GENERATED_BODY()
+	
+public:
+	UPROPERTY()
+	bool bIsRunning;
+	
+	UPROPERTY()
+	AActor* Instigator;
+};
+
 /**
  * 
  */
@@ -29,9 +43,18 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Tags")
 	FGameplayTagContainer BlockTags;
 
-	bool bIsRunning;
+	UPROPERTY(ReplicatedUsing="OnRep_RepData")
+	FActionRepData RepData;
+	//bool bIsRunning;
+
+	UFUNCTION()
+	void OnRep_RepData();
+	//UFUNCTION()
+	//void OnRep_IsRunning();
 	
 public:
+	UPROPERTY(EditDefaultsOnly, Category="Action")
+	bool bAutoStart;
 
 	UFUNCTION(BlueprintCallable, Category="Action")
 	bool GetIsRunning();
@@ -50,6 +73,11 @@ public:
 	FName ActionName;
 
 	virtual UWorld* GetWorld() const override;
+
+	bool IsSupportedForNetworking() const override
+	{
+		return true;
+	}
 };
 
 

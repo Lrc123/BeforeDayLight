@@ -28,7 +28,7 @@ protected:
 	UPROPERTY(EditAnywhere, Category= "Ability")
 	TSubclassOf<AActor> DashProjectileClass;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="Components")
 	UBDLAttributeComponent* AttributeComp;
 	/* VisibleAnywhere = read-only, still useful to view in-editor and enforce a convention. */
 	UPROPERTY(VisibleAnywhere, Category = "Effects")
